@@ -22,7 +22,7 @@ public class EmployeeReport
     [FindsBy(How = How.XPath, Using = "(//span[@class ='select2-selection__rendered'])[2]")] IWebElement depDD;
     [FindsBy(How = How.XPath, Using = "//li[text() ='CRROTHRM']")] IWebElement crrothrm;
     [FindsBy(How = How.XPath, Using = "//button[text() =' Get ']")] IWebElement GetButton;
-    [FindsBy(How = How.XPath, Using = "//li[text() ='MD Office']")] IWebElement MDOffice;
+    [FindsBy(How = How.XPath, Using = "//li[text() ='All']")] IWebElement All;
 
     
 
@@ -43,7 +43,7 @@ public class EmployeeReport
         companyDD.Click();
         crrothrm.Click();
         depDD.Click();
-        MDOffice.Click();
+        //All.Click();
         GetButton.Click();
         Thread.Sleep(1000);
     }

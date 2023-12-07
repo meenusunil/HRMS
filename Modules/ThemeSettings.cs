@@ -27,14 +27,15 @@ public  class ThemeSettings
         themes.Click();
         calendarToggle.Click();
         saveButton.Click();
+        c= true;
         //give explicit wait nad fetch the text from element and validate.
     }
     public void ToastMessage()
     {
         if (successMsg.Displayed == true)
-            c = true;
+            c = false; // 
         else
-            c = false;
+            c = true;
     }
 
     }

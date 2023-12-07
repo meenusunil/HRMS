@@ -17,7 +17,6 @@ using System.Threading.Tasks;
     public IWebDriver driver;
     public Login userLogin;
     public Browser browser;
-    public CloseBrowser close;
     public ExtentTest test;
     public AddEmployee addEmp;
     public Logout logout;
@@ -29,6 +28,7 @@ using System.Threading.Tasks;
     public ThemeSettings themeSettings;
     public HRMS_Screenshots screenshot;
     public EmployeeReport empRep;
+    public EmployeesAbsent abs;
 
     [OneTimeSetUp]
     public void Setup()
@@ -47,7 +47,7 @@ using System.Threading.Tasks;
     [Test, Order(1), Category("HRMS Application")]
     public void InvalidUsername()
     { 
-        Assert.Ignore();
+        //Assert.Ignore();
         test = extent.CreateTest("TC1: Enter invalid password").Info("This test enters invalid username and checks if error message is displayed");
         userLogin = new Login(driver);
         screenshot = new HRMS_Screenshots();
@@ -69,7 +69,7 @@ using System.Threading.Tasks;
     [Test, Order(2), Category("HRMS Application")]
     public void InvalidPassword()
     {
-        Assert.Ignore();
+        //Assert.Ignore();
         test = extent.CreateTest("TC2: Enter Invalid Password").Info("This test enters invalid password and checks if error message is displayed");
         userLogin = new Login(driver);
         screenshot = new HRMS_Screenshots();
@@ -96,6 +96,7 @@ using System.Threading.Tasks;
         userLogin = new Login(driver);
         screenshot = new HRMS_Screenshots();
         string name = "ValidCredentials.jpeg";
+        Thread.Sleep(1000);
         screenshot.TakeScreenshot(driver, name);
         if (userLogin.validCreds() == false)
         {
@@ -135,7 +136,7 @@ using System.Threading.Tasks;
     [Test, Order(5), Category("HRMS Application")] 
     public void SearchCompany()
     {
-        Assert.Ignore();
+        //Assert.Ignore();
         test = extent.CreateTest("TC5: Search for a company").Info("This tests the search functionality");
         org = new Organization(driver);
         org.searchFunctionality();
@@ -157,7 +158,7 @@ using System.Threading.Tasks;
     [Test, Order(6), Category("HRMS Application")] 
     public void UpdateContactNo()
     {
-        Assert.Ignore();
+        //Assert.Ignore();
         test = extent.CreateTest("TC6: Update Contact Number").Info("This tests if contact number can be updated successfully");
         Thread.Sleep(1000);
         profile = new Profile(driver);
@@ -182,7 +183,7 @@ using System.Threading.Tasks;
     [Test, Order(7), Category("HRMS Application")] 
     public void ApproveLeave()
     {
-        Assert.Ignore();
+       //Assert.Ignore();
         try {
             test = extent.CreateTest("TC7: Approve Leave").Info("This tests if leave can be approved successfully");
             leaveMngmt = new LeaveManagement(driver);
@@ -203,9 +204,10 @@ using System.Threading.Tasks;
                 Assert.Pass("Leave status not updated");
             }
         }
-        catch (NoSuchElementException ex)
+       catch (NoSuchElementException ex)
         {
             test.Log(Status.Fail, "No such element");
+            Assert.Fail("No such element");
         }
 
     }
@@ -213,14 +215,14 @@ using System.Threading.Tasks;
     [Test, Order(8), Category("HRMS Application")]   
     public void EmpFilterSection()
     {
-        Assert.Ignore();
+      // Assert.Ignore();
         test = extent.CreateTest("TC8: Employee Filter Section").Info("This tests if filter section is displayed");
         empFilter = new EmployeesFilter(driver);
         empFilter.FilterSectionDisplayed();
         screenshot = new HRMS_Screenshots();
         string name = "EmpFilter.jpeg";
         screenshot.TakeScreenshot(driver, name);
-        if (empFilter.f == true) //Change it back to false
+        if (empFilter.f == false) 
         {
             test.Log(Status.Fail, "Filter section not displayed");
             Assert.Fail("Filter section not displayed");
@@ -237,7 +239,7 @@ using System.Threading.Tasks;
     [Test, Order(9), Category("HRMS Application")]   
     public void EmpHideFilterSection()
     {
-        Assert.Ignore();
+      // Assert.Ignore();
         test = extent.CreateTest("TC9: Hide Filter Section").Info("This tests if section can be hidden");
         empFilter = new EmployeesFilter(driver);
         empFilter.HideFilterSection();
@@ -260,38 +262,50 @@ using System.Threading.Tasks;
     [Test, Order(10), Category("HRMS Application")]
     public void CalendarSettings()
     {
-        Assert.Ignore();
-        try
-        {
+        //Assert.Ignore();
             test = extent.CreateTest("TC10: Change Theme- Calendar").Info("This tests if calendar settings can be changed");
             themeSettings = new ThemeSettings(driver);
             themeSettings.ChangeCalendarSettings();
-            driver.SwitchTo().Frame("toast-container");
-            themeSettings.ToastMessage();
+            //driver.SwitchTo().Frame("toast-container");
+            //themeSettings.ToastMessage();
             screenshot = new HRMS_Screenshots();
             string name = "CalendarSettings.jpeg";
             screenshot.TakeScreenshot(driver, name);
             if (themeSettings.c == false)
+            {
+                test.Log(Status.Fail, "No such Frame.");
                 Assert.Fail("Calendar setting unchanged");
+            }
+                
             else
+            {
+                Assert.Pass("Calendar setting changed");
                 Assert.Pass();
-        }
-        catch(NoSuchFrameException e)
-        {
-            test.Log(Status.Fail,"No such Frame.");
-        }
+            }
+      
     }
 
     [Test, Order(11), Category("HRMS Application")]
-    public void EmpReport()
+    public void AbsentTabDisplayed()
     {
-        test = extent.CreateTest("TC11: Switch To child window").Info("This switches to child window");
-        empRep = new EmployeeReport(driver);
-        empRep.ClickEmpReport();
-        List<string> childHandles = driver.WindowHandles.ToList();
-        driver.SwitchTo().Window(childHandles[1]);
-        empRep.GoToEmpReportWindow();
-        driver.SwitchTo().Window(childHandles[0]);
+        //Assert.Ignore();
+        Thread.Sleep(1000);
+        test = extent.CreateTest("TC11: Absent Tab").Info("This tests if absent Tab is displayed");
+        abs = new EmployeesAbsent(driver);
+        screenshot = new HRMS_Screenshots();
+        string name = "AbsentTab.jpeg";
+        screenshot.TakeScreenshot(driver, name);
+        if (abs.t == true)
+        {
+            test.Log(Status.Fail, "Absent Tab is not displayed");
+            Assert.Fail("Absent Tab is not displayed");
+        }
+        else
+        {
+            test.Log(Status.Pass, "Absent Tab is displayed");
+            Assert.Pass("Absent Tab is displayed");
+        }
+
     }
 
 
@@ -299,6 +313,7 @@ using System.Threading.Tasks;
     public void LogoutApp()
     {
         //Assert.Ignore();
+        Thread.Sleep(1000);
         test = extent.CreateTest("TC12: Logout").Info("This tests if user can logout successfully");
         logout = new Logout(driver);
         screenshot = new HRMS_Screenshots();

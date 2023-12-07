@@ -37,6 +37,20 @@ using System.Threading.Tasks;
     {
         extent.Flush();
     }
+
+
+    public void SwitchToChildWindow()
+    {
+        List<string> childHandles = driver.WindowHandles.ToList();
+        driver.SwitchTo().Window(childHandles[1]);
+    }
+
+    public void SwitchToParentWindow()
+    {
+        driver.SwitchTo().Window(driver.WindowHandles[0]);
+    }
+
+
 }
 
 

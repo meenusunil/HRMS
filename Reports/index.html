@@ -49,7 +49,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">12/5/2023 10:58:10 AM</span>
+                    <span class="badge badge-primary">12/7/2023 10:47:20 AM</span>
                 </a>
             </li>
         </ul>
@@ -104,7 +104,7 @@
 						<i class="fa fa-exclamation-circle"></i>
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																				<div class="dropdown-divider"></div>
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>						<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																														<div class="dropdown-divider"></div>
 						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 					</ul>
 				</li>
@@ -118,19 +118,19 @@
 						</div>
 						<div class="open-test">
 							<div class="test-detail"> 
-								<p class="name">TC3: Enter valid credentials.</p> 
-								<p class="duration text-sm">0h:0m:9s+235ms</p> 
-								<span class="datetime">10:58:10 AM</span>
+								<p class="name">TC1: Enter invalid password</p> 
+								<p class="duration text-sm">0h:0m:8s+417ms</p> 
+								<span class="datetime">10:47:20 AM</span>
 							</div>
 						</div>
 						<div class="test-contents d-none">
 							<div class="detail-head">
 								<div class="p-v-10 d-inline-block">	
 									<div class="info">
-										<h5 class="test-status text-pass">TC3: Enter valid credentials.</h5>
-										<span class='badge badge-success'>12/5/2023 10:58:10 AM</span>
-										<span class='badge badge-danger'>12/5/2023 10:58:19 AM</span>
-										<span class='badge badge-default'>0h:0m:9s+235ms</span>
+										<h5 class="test-status text-pass">TC1: Enter invalid password</h5>
+										<span class='badge badge-success'>12/7/2023 10:47:20 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:47:29 AM</span>
+										<span class='badge badge-default'>0h:0m:8s+417ms</span>
 									</div>
 																	</div>
 							</div>
@@ -145,15 +145,15 @@
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:58:10</td>
+				<td>10:47:20</td>
 				<td>
-This test enters valid credentials and checks if login is successful									</td>
+This test enters invalid username and checks if error message is displayed									</td>
 			</tr>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:58:19</td>
+				<td>10:47:29</td>
 				<td>
-Login message for successful login is displayed									</td>
+Error message for invalid username is displayed									</td>
 			</tr>
 	</tbody>
 </table>
@@ -167,18 +167,361 @@ Login message for successful login is displayed									</td>
 						</div>
 						<div class="open-test">
 							<div class="test-detail"> 
-								<p class="name">TC11: Switch To child window</p> 
-								<p class="duration text-sm">0h:0m:0s+000ms</p> 
-								<span class="datetime">10:58:19 AM</span>
+								<p class="name">TC2: Enter Invalid Password</p> 
+								<p class="duration text-sm">0h:0m:6s+831ms</p> 
+								<span class="datetime">10:47:29 AM</span>
 							</div>
 						</div>
 						<div class="test-contents d-none">
 							<div class="detail-head">
 								<div class="p-v-10 d-inline-block">	
 									<div class="info">
-										<h5 class="test-status text-pass">TC11: Switch To child window</h5>
-										<span class='badge badge-success'>12/5/2023 10:58:19 AM</span>
-										<span class='badge badge-danger'>12/5/2023 10:58:19 AM</span>
+										<h5 class="test-status text-pass">TC2: Enter Invalid Password</h5>
+										<span class='badge badge-success'>12/7/2023 10:47:29 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:47:36 AM</span>
+										<span class='badge badge-default'>0h:0m:6s+831ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:47:29</td>
+				<td>
+This test enters invalid password and checks if error message is displayed									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:47:36</td>
+				<td>
+Error message for invalid password is not displayed									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="3"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC3: Enter valid credentials.</p> 
+								<p class="duration text-sm">0h:0m:13s+802ms</p> 
+								<span class="datetime">10:47:36 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TC3: Enter valid credentials.</h5>
+										<span class='badge badge-success'>12/7/2023 10:47:36 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:47:49 AM</span>
+										<span class='badge badge-default'>0h:0m:13s+802ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:47:36</td>
+				<td>
+This test enters valid credentials and checks if login is successful									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:47:49</td>
+				<td>
+Login message for successful login is displayed									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="4"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC5: Search for a company</p> 
+								<p class="duration text-sm">0h:0m:1s+299ms</p> 
+								<span class="datetime">10:47:49 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TC5: Search for a company</h5>
+										<span class='badge badge-success'>12/7/2023 10:47:49 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:47:51 AM</span>
+										<span class='badge badge-default'>0h:0m:1s+299ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:47:49</td>
+				<td>
+This tests the search functionality									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:47:51</td>
+				<td>
+Search functionality is working									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="5"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC6: Update Contact Number</p> 
+								<p class="duration text-sm">0h:0m:3s+352ms</p> 
+								<span class="datetime">10:47:51 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TC6: Update Contact Number</h5>
+										<span class='badge badge-success'>12/7/2023 10:47:51 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:47:54 AM</span>
+										<span class='badge badge-default'>0h:0m:3s+352ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:47:51</td>
+				<td>
+This tests if contact number can be updated successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:47:54</td>
+				<td>
+Search functionality is working									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="6"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC7: Approve Leave</p> 
+								<p class="duration text-sm">0h:0m:9s+529ms</p> 
+								<span class="datetime">10:47:54 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">TC7: Approve Leave</h5>
+										<span class='badge badge-success'>12/7/2023 10:47:54 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:48:04 AM</span>
+										<span class='badge badge-default'>0h:0m:9s+529ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:47:54</td>
+				<td>
+This tests if leave can be approved successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:48:04</td>
+				<td>
+No such element									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="7"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC8: Employee Filter Section</p> 
+								<p class="duration text-sm">0h:0m:3s+435ms</p> 
+								<span class="datetime">10:48:04 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TC8: Employee Filter Section</h5>
+										<span class='badge badge-success'>12/7/2023 10:48:04 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:48:07 AM</span>
+										<span class='badge badge-default'>0h:0m:3s+435ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:48:04</td>
+				<td>
+This tests if filter section is displayed									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:48:07</td>
+				<td>
+Filter section is displayed									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="8"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC9: Hide Filter Section</p> 
+								<p class="duration text-sm">0h:0m:1s+289ms</p> 
+								<span class="datetime">10:48:07 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TC9: Hide Filter Section</h5>
+										<span class='badge badge-success'>12/7/2023 10:48:07 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:48:08 AM</span>
+										<span class='badge badge-default'>0h:0m:1s+289ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:48:07</td>
+				<td>
+This tests if section can be hidden									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:48:08</td>
+				<td>
+Filter section is hidden									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="9"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC10: Change Theme- Calendar</p> 
+								<p class="duration text-sm">0h:0m:0s+000ms</p> 
+								<span class="datetime">10:48:08 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TC10: Change Theme- Calendar</h5>
+										<span class='badge badge-success'>12/7/2023 10:48:08 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:48:08 AM</span>
 										<span class='badge badge-default'>0h:0m:0s+000ms</span>
 									</div>
 																	</div>
@@ -194,9 +537,9 @@ Login message for successful login is displayed									</td>
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:58:19</td>
+				<td>10:48:08</td>
 				<td>
-This switches to child window									</td>
+This tests if calendar settings can be changed									</td>
 			</tr>
 	</tbody>
 </table>
@@ -204,25 +547,25 @@ This switches to child window									</td>
 </div>    
 						</div>
 					</li>
-					<li class="test-item" status="pass" author="" device="" tag="" test-id="3"> 
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="10"> 
 						<div class="status-avatar pass-bg">
 							<i class="fa fa-check text-white"></i>
 						</div>
 						<div class="open-test">
 							<div class="test-detail"> 
-								<p class="name">TC12: Logout</p> 
-								<p class="duration text-sm">0h:0m:1s+183ms</p> 
-								<span class="datetime">10:58:29 AM</span>
+								<p class="name">TC11: Absent Tab</p> 
+								<p class="duration text-sm">0h:0m:0s+234ms</p> 
+								<span class="datetime">10:48:13 AM</span>
 							</div>
 						</div>
 						<div class="test-contents d-none">
 							<div class="detail-head">
 								<div class="p-v-10 d-inline-block">	
 									<div class="info">
-										<h5 class="test-status text-pass">TC12: Logout</h5>
-										<span class='badge badge-success'>12/5/2023 10:58:29 AM</span>
-										<span class='badge badge-danger'>12/5/2023 10:58:30 AM</span>
-										<span class='badge badge-default'>0h:0m:1s+183ms</span>
+										<h5 class="test-status text-pass">TC11: Absent Tab</h5>
+										<span class='badge badge-success'>12/7/2023 10:48:13 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:48:13 AM</span>
+										<span class='badge badge-default'>0h:0m:0s+234ms</span>
 									</div>
 																	</div>
 							</div>
@@ -237,13 +580,62 @@ This switches to child window									</td>
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:58:29</td>
+				<td>10:48:13</td>
+				<td>
+This tests if absent Tab is displayed									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:48:13</td>
+				<td>
+Absent Tab is displayed									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="11"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TC12: Logout</p> 
+								<p class="duration text-sm">0h:0m:0s+675ms</p> 
+								<span class="datetime">10:48:14 AM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TC12: Logout</h5>
+										<span class='badge badge-success'>12/7/2023 10:48:14 AM</span>
+										<span class='badge badge-danger'>12/7/2023 10:48:15 AM</span>
+										<span class='badge badge-default'>0h:0m:0s+675ms</span>
+									</div>
+																	</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:48:14</td>
 				<td>
 This tests if user can logout successfully									</td>
 			</tr>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:58:30</td>
+				<td>10:48:15</td>
 				<td>
 Logout successful									</td>
 			</tr>
@@ -284,11 +676,11 @@ Logout successful									</td>
 	                </div>
 	            </div>
 	            <div class="card-footer">
-	                <div><small data-tooltip='100%'>
-	                    <b>3</b> tests passed
+	                <div><small data-tooltip='90.9090909090909%'>
+	                    <b>10</b> tests passed
                     </small></div>
 	                <div>
-	                    <small data-tooltip='0%'><b>0</b> tests failed, 
+	                    <small data-tooltip='9.090909090909092%'><b>1</b> tests failed, 
 	                    <b data-tooltip='0%'>0</b> others
 	                    </small>
                     </div>
@@ -303,10 +695,10 @@ Logout successful									</td>
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Tests</h6>
-							<h2 class="font-size-28 font-weight-light">3</h2>
+							<h2 class="font-size-28 font-weight-light">11</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-								<span>100%</span>
+								<span>90.91%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -322,7 +714,7 @@ Logout successful									</td>
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Start</h6>
-							<h6 class="font-weight-light">12/5/2023 10:58:10 AM</h6>
+							<h6 class="font-weight-light">12/7/2023 10:47:20 AM</h6>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -338,7 +730,7 @@ Logout successful									</td>
 	                <div class="media justify-content-between">
 						<div>
 							<h6 class="card-title">Duration</h6>
-							<h6 class="font-weight-light">00:00:20.6693349</h6>
+							<h6 class="font-weight-light">00:00:54.7333153</h6>
 							<span class="text-semibold text-danger font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -354,7 +746,7 @@ Logout successful									</td>
 	                <div class="media justify-content-between">
 						<div>
 							<p class="">Duration</p>
-							<h6 class="font-weight-light">00:00:28.9107715</h6>
+							<h6 class="font-weight-light">00:01:00.2485524</h6>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -370,14 +762,14 @@ Logout successful									</td>
 </div>
 <script>
 	var statusGroup = {
-    parentCount: 3,
-		passParent: 3,
-		failParent: 0,
+    parentCount: 11,
+		passParent: 10,
+		failParent: 1,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 0,
+		exceptionsParent: 1,
 		childCount: 0,
 		passChild: 0,
 		failChild: 0,
