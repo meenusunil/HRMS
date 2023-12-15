@@ -15,8 +15,15 @@ public class LoginCredentialsExcel
 
     public void OpenExcel()
     {
+        string excelFolder = System.Configuration.ConfigurationManager.AppSettings["LoginExcelFolder"];
+        string excelName = System.Configuration.ConfigurationManager.AppSettings["ExcelName"];
+        //Making a new path
+        string Base = AppDomain.CurrentDomain.BaseDirectory;
+        string RelativePath = Path.Combine(excelFolder, excelName);
+        string newpath = Path.Combine(Base, RelativePath);
+
         ex = new Excel.Application();
-        wb = ex.Workbooks.Open(@"C:\Users\mesunil\source\repos\HRMS\HRMS\Utilities\LoginCredentials.xlsx", FileAccess.ReadWrite);
+        wb = ex.Workbooks.Open(newpath, FileAccess.ReadWrite);
         ws = (Excel._Worksheet)wb.Worksheets[1];
         range = ws.UsedRange;
 

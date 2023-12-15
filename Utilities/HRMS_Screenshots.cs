@@ -11,11 +11,13 @@ public class HRMS_Screenshots
     //public IWebDriver driver;
    
 
-    public void TakeScreenshot(IWebDriver driver, string name)
+    public string TakeScreenshot(IWebDriver driver, string name)
     {
         ITakesScreenshot s = (ITakesScreenshot)driver;
         Screenshot scr = s.GetScreenshot();
-        scr.SaveAsFile("C:\\Users\\mesunil\\source\\repos\\HRMS\\HRMS\\Screenshots\\" + name, ScreenshotImageFormat.Jpeg);
+        string screenShotPath = System.Configuration.ConfigurationManager.AppSettings["ScreenshotFolder"];
+        scr.SaveAsFile(screenShotPath + name, ScreenshotImageFormat.Jpeg);
+        return screenShotPath + name;
 
     }
 
